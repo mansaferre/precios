@@ -49,9 +49,15 @@ fetch(CSV_URL)
     div.innerHTML = `
       <h1>${prod[i.n]}</h1>
       <div>Marca: ${prod[i.m]}</div>
-      <div class="precio">$ ${Number(prod[i.p]).toLocaleString("es-AR")}</div>
+      <div class="precio">$ ${Number(prod[i.p]).toLocaleString("es-AR", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+          })}</div>
       <div class="chico">Precio sujeto a modificaciones. Vigente al momento de la consulta.</div>
-      <div class="chico">Precio sin impuestos nacionales: $ ${Number(prod[i.s]).toLocaleString("es-AR")}</div>
+      <div class="chico">Precio sin impuestos nacionales: $ ${Number(prod[i.s]).toLocaleString("es-AR", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+          })}</div>
       <div>Stock: ${prod[i.st]}</div>
       <div class="chico">Mansa Ferre – Honramos el trabajo bien hecho</div>
     `;
