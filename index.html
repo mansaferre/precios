@@ -18,7 +18,7 @@
 <script>
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSYj55nCHEEnKGbrV3EgK-X6ZPNRyCFVNoecBNvwe08J9kQ94KJdzw2lHLwWWhFfA/pub?gid=1887717955&single=true&output=csv";
 
-const codigo = location.pathname.replace("/", "").toUpperCase();
+const codigo = location.pathname.split("/").pop().toUpperCase();
 const div = document.getElementById("contenido");
 
 fetch(CSV_URL)
