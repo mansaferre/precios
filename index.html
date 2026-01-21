@@ -5,12 +5,13 @@
   <title>Mansa Ferre - Precio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: system-ui, sans-serif; margin: 25px; text-align: center; }
-    h1 { font-size: 50px; text-align: center; }
-    .precio { font-size: 70px; font-weight: bold; margin-top: 12px; text-align: center; }
-    .chico { font-size: 15px; color: #555; text-align: center; }
-    .lema { font-size: 25px; color: #455; font-weight: bold; font-style: italic; text-align: center;  }
-    .space { margin-top: 20px; }
+    body { font-family: "Montserrat", system-ui, sans-serif; margin: 25px; text-align: center; }
+    h1 { font-family: "Montserrat", system-ui, sans-serif; font-size: 45px; text-align: center; }
+    .marca { font-family: "Montserrat", system-ui, sans-serif; margin: 10px; text-align: center; }
+    .precio { font-family: "Montserrat", system-ui, sans-serif;  font-size: 60px; font-weight: bold; margin-top: 12px; text-align: center; }
+    .chico { font-family: "Montserrat", system-ui, sans-serif; font-size: 15px; color: #555; text-align: center; }
+    .lema { font-family: "Montserrat", system-ui, sans-serif; font-size: 25px; color: #455; font-weight: bold; font-style: italic; text-align: center;  }
+    .space { font-family: "Montserrat", system-ui, sans-serif; margin-top: 20px; }
   </style>
 </head>
 <body>
@@ -50,10 +51,10 @@ fetch(CSV_URL)
     })
     div.innerHTML = `
       <h1>${prod[i.n]}</h1>
-      <div>Marca: ${prod[i.m]}</div>
+      <div class="marca">Marca: ${prod[i.m]}</div>
       <div class="precio">$ ${Number(prod[i.p]).toLocaleString("es-AR", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
           })}</div>
       <div class="space"></div>
       <div class="chico">Precio sujeto a modificaciones. Vigente al momento de la consulta.</div>
@@ -63,7 +64,7 @@ fetch(CSV_URL)
           })}</div>
       <div class="chico">ST-${prod[i.st]}</div>
       <div class="space"></div>
-      <div class="lema">Mansa Ferre – Valoramos el trabajo bien hecho</div>
+      <div class="lema">Mansa Ferre<br>Valoramos el trabajo bien hecho</div>
     `;
   });
 </script>
