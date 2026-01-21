@@ -52,6 +52,7 @@ fetch(CSV_URL)
     div.innerHTML = `
       <h1>${prod[i.n]}</h1>
       <div class="marca">Marca: ${prod[i.m]}</div>
+      <div class="marca">Cod.: ${prod[i.c]}</div>
       
       <div class="space"></div>
       <div class="precio">$ ${Number(prod[i.p]).toLocaleString("es-AR", {
