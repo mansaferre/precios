@@ -31,12 +31,12 @@ fetch(CSV_URL)
     const h = filas.shift();
 
     const i = {
-      c: h.indexOf("codigo"),
-      n: h.indexOf("DETALLE"),
-      m: h.indexOf("NOM_MARCA"),
-      p: h.indexOf("PRECIO"),
-      s: h.indexOf("TCOST_CIVA"),
-      st: h.indexOf("STOCK1")
+      c: h.indexOf("Artículo"),
+      n: h.indexOf("Descripción"),
+      m: h.indexOf("Marca"),
+      p: h.indexOf("PUB"),
+      s: h.indexOf("sIVA"),
+      st: h.indexOf("Cantidad")
     };
 
     const prod = filas.find(f => f[i.c] === codigo);
