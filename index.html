@@ -33,7 +33,7 @@ fetch(CSV_URL)
 
     const i = {
       c: h.indexOf("Artículo"),
-      p: h.indexOf("PREMIO"),
+      w: h.indexOf("PREMIO"),
       n: h.indexOf("Descripción"),
       m: h.indexOf("Marca"),
       p: h.indexOf("PUB"),
@@ -53,7 +53,7 @@ fetch(CSV_URL)
       maximumFractionDigits: 2
     })
     div.innerHTML = `
-      
+      <h2>${prod[i.w]}</h2>
       <h1>${prod[i.n]}</h1>
       <div class="marca">Marca: ${prod[i.m]}</div>
       <div class="marca">Cod.: ${prod[i.c]}</div>
